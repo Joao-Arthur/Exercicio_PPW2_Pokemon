@@ -3,7 +3,7 @@ class PokemonBuilder {
     nome;
     tipo;
     descricao;
-    urlImagem;
+    url;
 
     setNumero(numero) {
         this.numero = numero;
@@ -25,8 +25,8 @@ class PokemonBuilder {
         return this;
     }
 
-    setURLImagem(urlImagem) {
-        this.urlImagem = urlImagem;
+    seturl(url) {
+        this.url = url;
     }
 
     validaSeDadosInformados() {
@@ -36,7 +36,7 @@ class PokemonBuilder {
         if (!this.tipo) throw new Error('necessário informar tipo do Pokemon!');
         if (!this.descricao)
             throw new Error('necessário informar descrição do Pokemon!');
-        if (!this.urlImagem)
+        if (!this.url)
             throw new Error('necessário informar a url da imagem do Pokemon!');
     }
 
@@ -77,7 +77,7 @@ class PokemonBuilder {
             nome: this.nome,
             tipo: this.tipo,
             descricao: this.descricao,
-            urlImagem: this.urlImagem
+            url: this.url
         };
     }
 }

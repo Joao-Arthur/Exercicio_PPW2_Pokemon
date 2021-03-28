@@ -11,14 +11,14 @@ function adicionaPokemon() {
     const numero = Number(getValorCampo('numero'));
     const nome = getValorCampo('nome');
     const descricao = getValorCampo('descricao');
-    const urlImagem = getValorCampo('urlImagem');
+    const url = getValorCampo('url');
     const tipo = getValorSelect('tipo');
 
     const pokemon = new PokemonBuilder()
         .setNumero(numero)
         .setNome(nome)
         .setDescricao(descricao)
-        .setURLImagem(urlImagem)
+        .seturl(url)
         .setTipo(tipo)
         .build();
 
@@ -45,7 +45,7 @@ function limpaCampos() {
     limpaCampo('numero');
     limpaCampo('nome');
     limpaCampo('descricao');
-    limpaCampo('urlImagem');
+    limpaCampo('url');
     limpaCampo('tipo');
 }
 

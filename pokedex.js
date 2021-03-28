@@ -110,7 +110,7 @@ function editar(numero) {
     document.getElementById('numero').value = pokemon.numero;
     document.getElementById('nome').value = pokemon.nome;
     document.getElementById('descricao').value = pokemon.descricao;
-    document.getElementById('urlImagem').value = pokemon.urlImagem;
+    document.getElementById('url').value = pokemon.url;
     Array.from(document.getElementById('tipo').children).forEach(option => {
         if (pokemon.tipo.includes(option.value)) {
             option.setAttribute('selected', '');
@@ -133,14 +133,14 @@ function salvarEdicao(e) {
     const numero = Number(getValorCampo('numero'));
     const nome = getValorCampo('nome');
     const descricao = getValorCampo('descricao');
-    const urlImagem = getValorCampo('urlImagem');
+    const url = getValorCampo('url');
     const tipo = getValorSelect('tipo');
 
     const pokemon = new PokemonBuilder()
         .setNumero(numero)
         .setNome(nome)
         .setDescricao(descricao)
-        .setURLImagem(urlImagem)
+        .seturl(url)
         .setTipo(tipo)
         .build();
 

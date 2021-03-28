@@ -20,7 +20,7 @@ function onShowCaseClick() {
         intervalID = window.setInterval(() => {
             const pokemon = getProximoPokemon();
             nomePokemon.textContent = pokemon.nome;
-            imagemPokemon.url = pokemon.url;
+            imagemPokemon.src = pokemon.url;
         }, TEMPO_EXIBICAO);
     }
 }
