@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link href="content.css" rel="stylesheet" />
+        <link href="form.css" rel="stylesheet" />
+        <link href="accordion.css" rel="stylesheet" />
+        <link href="index.css" rel="stylesheet" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Language" content="pt-br" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <main>
+            <details open>
+                <summary>Adicionar novo Pokémon</summary>
+                <form id="formPokemon">
+                    <div>
+                        <span>Número</span>
+                        <input
+                            type="number"
+                            inputmode="numeric"
+                            required
+                            min="1"
+                            max="151"
+                            placeholder="25"
+                            id="numero"
+                        />
+                    </div>
+                    <div>
+                        <span>Nome</span>
+                        <input
+                            type="text"
+                            required
+                            placeholder="pikachu"
+                            id="nome"
+                        />
+                    </div>
+                    <div>
+                        <span>Descrição</span>
+                        <input
+                            type="text"
+                            required
+                            placeholder="Roedor baixo e gordinho"
+                            name="descricao"
+                            id="descricao"
+                        />
+                    </div>
+                    <div>
+                        <span>URL Imagem</span>
+                        <input
+                            type="text"
+                            required
+                            placeholder="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+                            name="urlImagem"
+                            id="urlImagem"
+                        />
+                    </div>
+                    <div>
+                        <span>Tipo</span>
+                        <select multiple required name="tipo" id="tipo">
+                            <option value="GRAMA">Grama</option>
+                            <option value="FOGO">Fogo</option>
+                            <option value="AGUA">Água</option>
+                            <option value="INSETO">Inseto</option>
+                            <option value="NORMAL">Normal</option>
+                            <option value="VENENOSO">Venenoso</option>
+                            <option value="ELETRICO">Elétrico</option>
+                            <option value="TERRA">Terra</option>
+                            <option value="LUTADOR">Lutador</option>
+                            <option value="PSIQUICO">Psíquico</option>
+                            <option value="PEDRA">Pedra</option>
+                            <option value="VOADOR">Voador</option>
+                            <option value="FANTASMA">Fantasm</option>
+                            <option value="GELO">Gelo</option>
+                            <option value="DRAGAO">Dragão</option>
+                            <option value="METALICO">Metálico</option>
+                            <option value="NOTURNO">Noturno</option>
+                            <option value="FADA">Fada</option>
+                        </select>
+                    </div>
+                    <button id="submitPokemon">Adicionar pokémon</button>
+                </form>
+            </details>
+            <article id="containerListaPokemons"></article>
+            <button id="showCase">Showcase</button>
+            <article>
+                <h6 class="hidden" id="nomePokemon"></h6>
+                <img class="hidden" id="imagemPokemon"
+                src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
+                / >
+            </article>
+        </main>
+        <script src="constantes.js"></script>
+        <script src="pokedex.js"></script>
+        <script src="pokemon.js"></script>
+        <script src="DOMFunctions.js"></script>
+        <script src="index.js"></script>
+        <script src="showcase.js"></script>
+    </body>
+</html>

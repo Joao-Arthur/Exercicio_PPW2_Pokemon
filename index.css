@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+}
+
+button {
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    outline: none;
+    cursor: pointer;
+}
+
+button:focus,
+button:active {
+    box-shadow: 0 0 2px purple;
+}
